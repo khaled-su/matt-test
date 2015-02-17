@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-5">
+        <form name="submitForm" data-novalidate data-ng-submit="submitForm.$valid && addStore()">
+            <fieldset>
+                <legend>Add Store</legend>
+                <alert type="alertType" ng-show='alertMsg.length > 0'>
+                    {{alertMsg}}
+                </alert>
+                <input data-ng-model="store.data.name" class="form-control" placeholder="Name" required>
+
+                <input data-ng-model="store.data.keyword" class="form-control" placeholder="Keyword" required>
+
+                <div style="clear: both;float: left;padding-top: 13px; margin-bottom: 100px">
+                    <button id="addStoreBtn" data-loading-text="Adding Store..." class="btn btn-lg btn-primary btn-block">
+                        Submit
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
